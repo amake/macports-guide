@@ -1,0 +1,79 @@
+{
+    "name": "MacPorts Guide",
+    "package": "MacPorts",
+    "index": "index.html",
+    "selectors": {
+      "h1 a:nth-child(2)": "Guide",
+      "div.chapter:nth-child(7) > div:nth-child(4) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(5) dl.variablelist .term": {
+        "type": "Global",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(6) > div:nth-child(3) dl.variablelist .term": {
+        "type": "Event",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(6) > div:nth-child(n+5) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(7) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(8) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(9) > div:nth-child(3) > dl:nth-child(1) > dd .term": {
+        "type": "Command",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(10) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(11) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(7) > div:nth-child(12) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.refsection:nth-child(4) > div:nth-child(4) > dl.variablelist .term": {
+        "type": "File",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(8) > div:nth-child(5) dl.variablelist .term": {
+        "type": "Option",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      },
+      "div.chapter:nth-child(8) > div:nth-child(8) dl.variablelist .term": {
+        "type": "Function",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " "
+      }
+    },
+    "ignore": [
+        "ABOUT"
+    ],
+    "icon32x32": "icon32x32.png",
+    "allowJS": false,
+    "ExternalURL": "https://guide.macports.org/"
+}

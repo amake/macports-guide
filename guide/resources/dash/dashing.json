@@ -1,0 +1,75 @@
+{
+    "name": "MacPorts Guide",
+    "package": "MacPorts",
+    "index": "chunked/index.html",
+    "selectors": {
+      ".navheader th:nth-child(1)": {
+        "regexp": "^Chapter[\u00a0\\s]+\\d+\\.[\u00a0\\s]+|^\\d\\.(\\d\\.)?[\u00a0\\s]+",
+        "replacement": "",
+        "type": "Guide",
+        "matchpath": "chunked/.*\\.html"
+      },
+      "dl.variablelist .term": [
+        {
+          "type": "Keyword",
+          "regexp": "(?s)\\s+|,$",
+          "replacement": " ",
+          "matchpath": "chunked/reference(\\.dependencies|\\.variants|\\.startupitems|\\.livecheck|\\.portgroup|)\\.html"
+        },
+        {
+          "type": "Global",
+          "regexp": "(?s)\\s+|,$",
+          "replacement": " ",
+          "matchpath": "chunked/reference\\.variables\\.html"
+        },
+        {
+          "type": "File",
+          "regexp": "(?s)\\s+|,$",
+          "replacement": " ",
+          "matchpath": "chunked/porthier\\.html"
+        },
+        {
+          "type": "Option",
+          "regexp": "(?s)\\s+|,$",
+          "replacement": " ",
+          "matchpath": "chunked/internals\\.configuration-files\\.html"
+        },
+        {
+          "type": "Option",
+          "regexp": "(?s)\\s+|,$",
+          "replacement": " ",
+          "matchpath": "chunked/internals\\.registry\\.html"
+        }
+      ],
+      "div.section:nth-child(3) > div:nth-child(3) dl.variablelist .term": {
+        "type": "Event",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " ",
+        "matchpath": "chunked/reference\\.phases\\.html"
+      },
+      ".book > div:nth-child(6) > div:nth-child(n+4) dl.variablelist .term": {
+        "type": "Keyword",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " ",
+        "matchpath": "chunked/reference\\.phases\\.html"
+      },
+      ".code": {
+        "type": "Function",
+        "regexp": ":$",
+        "replacement": "",
+        "matchpath": "chunked/internals\\.apis\\.html"
+      },
+      "dd dl.variablelist .term": {
+        "type": "Function",
+        "regexp": "(?s)\\s+|,$",
+        "replacement": " ",
+        "matchpath": "chunked/reference\\.tcl-extensions\\.html"
+      }
+    },
+    "ignore": [
+        "ABOUT"
+    ],
+    "icon32x32": "icon@2x.png",
+    "allowJS": false,
+    "ExternalURL": "https://guide.macports.org/"
+}

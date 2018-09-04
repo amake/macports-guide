@@ -1,0 +1,12 @@
+div.toc, #tabswitch {
+    display: none;
+}
+div.toc.index {
+    display: block;
+}
+body.chunked div.book > div.chapter,
+body.chunked div.book > div.section,
+body.chunked div.book > div.refentry,
+body.singlepage div.chapter {
+	margin-left: unset;
+}

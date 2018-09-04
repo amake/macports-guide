@@ -110,3 +110,15 @@ clean:
 # Validate the XML files for the guide.
 validate:
 	$(XMLLINT) --xinclude --loaddtd --postvalid --noout $(GUIDE_XML)/guide.xml
+
+.PHONY: dash
+dash: $(GUIDE_RESULT)/MacPorts.tgz
+
+$(GUIDE_RESULT)/MacPorts.tgz: $(GUIDE_RESULT)/MacPorts.docset
+	cd $(GUIDE_RESULT); tar --exclude='.DS_Store' -cvzf $(@F) $(<F)
+
+$(GUIDE_RESULT)/MacPorts.docset: $(wildcard $(GUIDE)/resources/dash/*) | guide-chunked
+	cp $(^) $(@D)
+	$(REINPLACE) 's|<div class="toc">|<div class="toc index">|' $(GUIDE_RESULT)/chunked/index.html
+	cat $(GUIDE)/resources/dash/dash.css >> $(GUIDE_RESULT)/chunked/docbook.css
+	cd $(GUIDE_RESULT); dashing build
